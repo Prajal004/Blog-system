@@ -29,7 +29,4 @@ A full-stack blog management system with authentication, draft/publish features,
 - Context API for state management
 
 ## Project Structure
-# blog-system-2
-# Blog-system
-# blog-system-
-# blog-system-
+# blog-system
