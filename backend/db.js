@@ -47,10 +47,16 @@ const AppDataSource = new DataSource({
   host: process.env.DB_HOST || 'localhost',
   port: parseInt(process.env.DB_PORT) || 5432,
   username: process.env.DB_USERNAME || 'postgres',
-  password: process.env.DB_PASSWORD || '',
+  password: process.env.DB_PASSWORD || 'Nepal@004',
   database: process.env.DB_DATABASE || 'blog_db',
   synchronize: true,
   entities: [BlogEntity, CommentEntity, UserEntity]
 });
-
+AppDataSource.initialize()
+   .then(() => {
+     console.log('Database connected succesfully');
+    })
+    .catch(err => {
+      console.error('Database connected error', err.message);
+    });
 module.exports = AppDataSource;
