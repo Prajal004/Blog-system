@@ -9,7 +9,7 @@ export default function Dashboard() {
   const [title, setTitle] = useState('');
   const [content, setContent] = useState('');
   const [status, setStatus] = useState('published');
-  const [user, setUser] = useState(null);
+  const [user, setUser] = useState(null); 
 
   useEffect(() => {
     const token = localStorage.getItem('token');
@@ -128,6 +128,14 @@ export default function Dashboard() {
               <button onClick={() => deleteBlog(blog.slug)} style={{ background: '#e53e3e', color: 'white', border: 'none', padding: '0.25rem 1rem', borderRadius: '3px', cursor: 'pointer' }}>
                 Delete
               </button>
+              <Link href={'/edit/${blog.slug}'}>
+               <button>Editi</button>
+              <Link href={'/edit/${blog.slug}'}>
+               <button stlye={{ background: '#4CF50', color: 'white', border: 'none', padding: '0.25rem', bordRadius: '3pr', marginRidus: 'o.5rem', cursor: 'ointer' }}>
+                Editi   
+               </button>
+              </Link>
+              </Link> 
             </div>
           </div>
         ))}
